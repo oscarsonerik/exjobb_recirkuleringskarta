@@ -18,7 +18,8 @@ st.set_page_config(page_title="Examensarbete", page_icon=":world_map:", layout="
 #https://docs.streamlit.io/1.30.0/library/components/components-api#stiframe
 # To mirror the map on the streamlit window. The map needs to be online (website) by it self.
 st.header("Recirkuleringskarta")
-map = st.components.v1.iframe('http://127.0.0.1:5500/index.html#14/',height=500)
+map = st.components.v1.iframe('https://oscarsonerik.github.io/endastindex/',height=500)
+#http://127.0.0.1:5500/index.html#14/
 #https://oscarsonerik.github.io/endastindex/
 #http://127.0.0.1:5500/index.html#14/
 #"""""""""
