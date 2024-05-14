@@ -13,14 +13,14 @@ def GetData(magazinsize, water_use, arean, avrinn_koeff):
   '''
   Read Csv.files
   '''
-  df_365 = pd.read_csv('SMHI\SMHI_modified3.csv')
-  df_med_last_14 = pd.read_csv('SMHI\SMHI_2014_2020.csv',  delimiter=";", decimal=",")
+  df_365 = pd.read_csv('SMHI/SMHI_modified3.csv')
+  df_med_last_14 = pd.read_csv('SMHI/SMHI_2014_2020.csv',  delimiter=";", decimal=",")
   # plt.plot(df_med_last_14['Temperatur'])
-  #df_med_last_14 = pd.read_csv('SMHI\Piteå.csv', delimiter=';', decimal=",")
+  #df_med_last_14 = pd.read_csv('SMHI/Piteå.csv', delimiter=';', decimal=",")
   # plt.figure()
   # plt.plot(df_med_last_14['Temperatur'])
   # plt.show()
-  #df_med_last_14 = pd.read_csv('SMHI\SMHI_2014_2020_test.csv',  delimiter=";", decimal=",")
+  #df_med_last_14 = pd.read_csv('SMHI/SMHI_2014_2020_test.csv',  delimiter=";", decimal=",")
   df_med_last_14.insert(0, 'ID', range(len(df_med_last_14))) # Lägger till ID i första kolumnen
   """
   Load data into variable
@@ -186,7 +186,7 @@ Divide into month distribution
 # OBS ! Ej samma ordning som för Make365
 def MonthDisp(avg_year_365):
   # Create lists over the distribution over the month from the average year set.
-  df_365 = pd.read_csv('SMHI\SMHI_modified3.csv')
+  df_365 = pd.read_csv('SMHI/SMHI_modified3.csv')
   mån = df_365['Månad']
   #print(mån)
   antal_dagar_månad = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
@@ -302,7 +302,7 @@ if __name__ == "__main__":
 
   # svar = (tot_h2o_use, water_out, volume_tank, snow_amount, vattentanknivå, apnd_upptag, apnd_water_out, prec_m3, apnd_water_in2tank, prec_mm, apnd_avrinn_volym)  
   # Creating the boxplot
-  df_med_last_14 = pd.read_csv('SMHI\SMHI_2014_2020.csv',  delimiter=";", decimal=",")
+  df_med_last_14 = pd.read_csv('SMHI/SMHI_2014_2020.csv',  delimiter=";", decimal=",")
   years = df_med_last_14['År siffra']
   days_per_year = 365
   tick_positions = [days_per_year * (i + 0.5) for i in range(len(years) // days_per_year)]
@@ -345,7 +345,7 @@ if __name__ == "__main__":
 # ____________
   
   # svar = (tot_h2o_use, water_out, volume_tank, snow_amount, vattentanknivå, apnd_upptag, apnd_water_out, prec_m3, apnd_water_in2tank, prec_mm, apnd_avrinn_volym)
-  df_365 = pd.read_csv('SMHI\SMHI_modified3.csv')
+  df_365 = pd.read_csv('SMHI/SMHI_modified3.csv')
   data_ned = svar[9]
   data_ned = np.array(data_ned)*0.001*arean
   data_in2tank = svar[8]
