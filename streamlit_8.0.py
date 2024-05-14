@@ -72,7 +72,7 @@ magazinsize = st.slider("Ange storlek på regnvattentank [m³]",
     #"""""""""
 
 # Read the CSV file into a DataFrame
-df = pd.read_csv('SMHI\SMHI_modified3.csv')
+df = pd.read_csv('SMHI/SMHI_modified3.csv')
 day = df['Dagar']
 prec = df['Precip Medel']
 temp = df['Temperature Medel']
@@ -187,7 +187,7 @@ st.pyplot(plt.gcf())
 st.markdown('<hr style="border: 1px solid green;">', unsafe_allow_html=True)
 
 # Plot vattentankvolym
-df_med_last_14 = pd.read_csv('SMHI\SMHI_2014_2020.csv',  delimiter=";", decimal=",")
+df_med_last_14 = pd.read_csv('SMHI/SMHI_2014_2020.csv',  delimiter=";", decimal=",")
 years = df_med_last_14['År siffra']
 days_per_year = 365
 plt.figure(figsize=(10, 4))
