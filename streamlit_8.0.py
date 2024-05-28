@@ -142,7 +142,7 @@ data = {'Nederbördsvolym': prec_temporery,
         'Överflödig volym': month_avg[2]}
 dfen = pd.DataFrame(data, index=months)
 ax = dfen.plot.bar(figsize=(10, 6))
-plt.title('Genomsnittliga volymer')
+plt.title('Genomsnittliga volymer per månad')
 plt.xlabel('Månad')
 plt.ylabel('m³')
 plt.xticks(x+bar_width, months)
