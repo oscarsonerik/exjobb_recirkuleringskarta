@@ -176,7 +176,7 @@ data = {'Totalt vattenbehov': wateruse_month,
         'Tillskottsbehov av vatten': dricksvatten_mån}
 dfen = pd.DataFrame(data, index=months)
 dfen.plot.bar(figsize=(10, 6))
-plt.title('Fördelning av vattenanvändning')
+plt.title('Fördelning av vattenanvändning per månad')
 plt.xlabel('Månad'); plt.ylabel('m³')
 plt.xticks(x+bar_width, months)
 #plt.legend(loc='center left', bbox_to_anchor=(1, 0.5))
